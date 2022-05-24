@@ -1,13 +1,23 @@
 {
-  "name": "refetch-interval",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {},
+  "name": "Ocean-Stream-Night-Life",
+  "version": "0.1.0",
+  "description": "A WebVR dancing experience using A-Frame by Mozilla VR.",
   "scripts": {
-    "start": "node index.js"
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --inline",
+    "lint": "semistandard -v | snazzy"
+  },
+  "repository": "aframevr/a-saturday-night",
+  "license": "MIT",
+  "semistandard": {
+    "ignore": ["**/vendor/**"]
   },
   "devDependencies": {
-    "@types/node": "^17.0.21"
+    "cross-env": "^3.0.0",
+    "json-loader": "^0.5.4",
+    "semistandard": "^9.0.0",
+    "snazzy": "^4.0.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
   }
 }
